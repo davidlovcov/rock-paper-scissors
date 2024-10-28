@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+}
+
+#round-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.928);
+    color: white;
+}
+
+#result-text {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.511);
+    color: greenyellow;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;  
+}
+
+.clickable:hover {
+    filter: brightness(90%);
+}
+
+.clickable:active {
+    width: 100px;
+    height: 100px;
+    filter: brightness(70%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.human-container, .computer-container {
+    text-align: center;
+    width: 100px;
+}
+
+.choices {
+    display: flex;
+    gap: 10px;
+}
+
+.holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+
+#fight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 705px;
+}
+
+@media only screen and (max-width: 750px) {
+   img {
+    width: 80;
+    height: 80;
+   }
+    
+    #fight {
+        width: 100%;
+    }
+    
+    .container {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .choices {
+        gap: 0;
+    }
+
+    .holder {
+        width: 80px;
+        height: 80px;
+    }
+
+    .holder img {
+        width: 100%;
+        height: 100%;
+    }
+}

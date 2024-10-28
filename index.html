@@ -8,6 +8,60 @@
     <title>Rock-Paper-Scissors</title>
 </head>
 <body>
-    
+    <div>   
+        <div id="round-option">
+            <h2>Let's play Rock, Paper, Scissors!</h2>
+            <form>
+                <label for="rounds">Choose rounds:</label>
+                <select id="rounds" name="rounds">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </form>
+            <button onclick="roundOption()">Start Game</button>
+        </div>
+        <div id="result-text">
+            <span id="result-message">You won!</span>
+            <button id="restart" onclick="restartGame()">Restart</button>
+        </div>
+        <div class="game">
+            <h1>Rock, Paper or Scissors? Choose wisely!</h1>
+            <h2 id="current-round">Round 1</h2>
+            <div class="container">
+                <div class="human-container">
+                    <h2>Human</h2>
+                    <h2 id="human-score">0</h2>
+                </div>
+                <div class="choices">
+                    <div class="holder">
+                        <img class="clickable" onclick="startTurn('rock')" id="rock" src="./rock.png" alt="Rock"></button>
+                    </div>
+                    <div class="holder">
+                        <img class="clickable" onclick="startTurn('paper')" id="paper" src="./paper.png" alt="Paper">
+                    </div>
+                    <div class="holder">
+                        <img class="clickable" onclick="startTurn('scissors')" id="scissors" src="./scissors.png" alt="Scissors">
+                    </div>
+                </div>
+                <div class="computer-container">
+                    <h2>Computer</h2>
+                    <h2 id="computer-score">0</h2>
+                </div>
+            </div>
+            <div id="fight">
+                <img id="human-image" src="" alt="">
+                <h2 id="round-result">3</h2>
+                <img id="computer-image" src="" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
